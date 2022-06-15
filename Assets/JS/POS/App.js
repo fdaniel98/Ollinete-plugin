@@ -1,3 +1,5 @@
+
+
 function isEventTarget(target, elementClass) {
     return target && target.classList.contains(elementClass);
 }

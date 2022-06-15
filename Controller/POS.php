@@ -7,8 +7,21 @@ use FacturaScripts\Dinamic\Lib\POS\Sales\Customer;
 
 class POS extends \FacturaScripts\Plugins\POS\Controller\POS
 {
+
     const DEFAULT_ORDER = 'FacturaCliente';
     const HOLD_ORDER = 'OperacionPausada';
+
+    public function getRef($code): string
+    {
+        $cliente = new Cliente();
+        $cliente->loadFromCode($code);
+        return $cliente->ref ?? "";
+    }
+
+    public function test()
+    {
+        return 'test';
+    }
 
     protected function execPreviusAction(string $action): bool
     {
