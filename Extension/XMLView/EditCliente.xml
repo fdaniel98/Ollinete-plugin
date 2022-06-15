@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data_extension" numcolumns="12">
+            <column name="Referencia" order="100">
+                <widget type="textarea" fieldname="ref" />
+            </column>
+        </group>
+    </columns>
+</view>
