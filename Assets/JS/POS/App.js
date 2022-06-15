@@ -62,7 +62,7 @@ function basePostRequest(data) {
         body: data
     };
 
-    return fetch("", options).then(response => {
+    return fetch(window.location, options).then(response => {
         if (response.ok) {
             return response.json();
         }
