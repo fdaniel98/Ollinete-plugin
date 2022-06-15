@@ -1,10 +1,11 @@
-
-
 function isEventTarget(target, elementClass) {
     return target && target.classList.contains(elementClass);
 }
 
-const settings = document.getElementById('app-settings').dataset;
+if (document.getElementById('app-settings')) {
+    const settings = document.getElementById('app-settings').dataset;
+}
+
 
 document.getElementById('customerSearchResult').addEventListener('click', function (e) {
     if (isEventTarget(e.target, 'item-add-button')) {
@@ -61,7 +62,7 @@ function basePostRequest(data) {
         body: data
     };
 
-    return fetch(settings.url, options).then(response => {
+    return fetch("", options).then(response => {
         if (response.ok) {
             return response.json();
         }
