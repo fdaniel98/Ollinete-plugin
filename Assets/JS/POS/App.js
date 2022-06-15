@@ -1,5 +1,14 @@
+function isEventTarget(target, elementClass) {
+    return target && target.classList.contains(elementClass);
+}
 
 const settings = document.getElementById('app-settings').dataset;
+
+document.getElementById('customerSearchResult').addEventListener('click', function (e) {
+    if (isEventTarget(e.target, 'item-add-button')) {
+        setCustomer(e.target.dataset.code, e.target.dataset.description);
+    }
+});
 
 document.getElementById('newCustomerSaveButtonUpdated').addEventListener('click', function () {
     return onSaveNewCustomer();
@@ -32,6 +41,10 @@ function onSaveNewCustomer() {
 
     function saveCustomer(response) {
         if (response.codcliente) {
+            document.getElementById('newCustomerTaxID').value = "";
+            document.getElementById('newCustomerName').value = "";
+            document.getElementById('newCustomerRef').value = "";
+
             setCustomer(response.codcliente, response.razonsocial);
             $("#newCustomerForm").collapse('toggle');
         }
