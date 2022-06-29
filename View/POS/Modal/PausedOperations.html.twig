@@ -40,7 +40,7 @@
                             <tr class="{{ rowbg }}">
                                 <td>{{ operation.codigo }}</td>
                                 <td>{{ i18n.trans(operation.nombrecliente) }}</td>
-                                <td>{{ fsc.getRef(operation.codcliente, operation.reference) }}</td>
+                                <td>{{ fsc.getRef(operation.codcliente, operation.observaciones) }}</td>
                                 <td>{{ operation.fecha }}</td>
                                 <td>{{ operation.hora }}</td>
                                 <td>{{ fsc.toolBox().coins().format(operation.total) }}</td>
