@@ -6,7 +6,6 @@ class Init extends \FacturaScripts\Core\Base\InitClass
     public function init()
     {
         // se ejecuta cada vez que carga FacturaScripts (si este plugin está activado).
-        $this->loadExtension(new Extension\Controller\POS());
         $this->loadExtension(new Extension\Model\OperacionPausada());
         $this->loadExtension(new Extension\Model\FacturaCliente());
         $this->loadExtension(new Extension\Model\Cliente());
