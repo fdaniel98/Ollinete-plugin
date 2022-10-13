@@ -59,7 +59,7 @@ class POS extends \FacturaScripts\Plugins\POS\Controller\POS
         }
     }
 
-    private function saveNewCustomer()
+    protected function saveNewCustomer()
     {
         $taxID = $this->request->request->get('taxID');
         $name = $this->request->request->get('name');
